@@ -1,0 +1,11 @@
+[client]
+user = churplus_pi
+password = MCkLTWmBkVq2h7OPhTo4eg==
+host = 194.150.248.147
+database = churplus_noa
+
+[device]
+name = Pi_E30
+
+[version]
+version_number = 1.0.0

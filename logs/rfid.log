@@ -1,0 +1,30 @@
+02-12-2024 09:56 - INFO - [RFID Reader] PN532 erfolgreich initialisiert.
+02-12-2024 09:57 - INFO - [RFID Reader] Tag mit UID gefunden: 04309702426680
+02-12-2024 10:03 - INFO - [RFID Reader] PN532 erfolgreich initialisiert.
+02-12-2024 10:04 - INFO - [RFID Reader] PN532 erfolgreich initialisiert.
+02-12-2024 10:04 - INFO - [RFID Reader] Tag mit UID gefunden: 04309702426680
+02-12-2024 10:04 - INFO - [RFID Reader] Tag mit UID gefunden: 04309702426680
+02-12-2024 10:05 - INFO - [RFID Reader] PN532 erfolgreich initialisiert.
+02-12-2024 10:06 - INFO - [RFID Reader] Tag mit UID gefunden: 04309702426680
+02-12-2024 10:08 - INFO - [RFID Reader] PN532 erfolgreich initialisiert.
+02-12-2024 10:09 - INFO - [RFID Reader] PN532 erfolgreich initialisiert.
+02-12-2024 10:10 - INFO - [RFID Reader] PN532 erfolgreich initialisiert.
+02-12-2024 10:11 - INFO - [RFID Reader] Tag mit UID gefunden: 04309702426680
+02-12-2024 10:11 - INFO - [RFID Reader] Keine Datenbankverbindung. Schreibe in Backup.
+02-12-2024 11:37 - INFO - [RFID Reader] PN532 erfolgreich initialisiert.
+02-12-2024 11:37 - INFO - [RFID Reader] Tag mit UID gefunden: 04309702426680
+02-12-2024 11:37 - INFO - [RFID Reader] Tag mit UID gefunden: 04309702426680
+02-12-2024 11:39 - ERROR - [RFID Reader] Read attempt 3 failed: Did not receive expected ACK from PN532!
+02-12-2024 11:47 - INFO - [RFID Reader] Tag mit UID gefunden: 04309702426680
+02-12-2024 16:58 - ERROR - [RFID Reader] Read attempt 3 failed: Did not receive expected ACK from PN532!
+02-12-2024 19:59 - ERROR - [RFID Reader] Read attempt 2 failed: Did not receive expected ACK from PN532!
+02-12-2024 20:54 - ERROR - [RFID Reader] Read attempt 3 failed: Did not receive expected ACK from PN532!
+03-12-2024 07:54 - INFO - [RFID Reader] Tag mit UID gefunden: 04309702426680
+03-12-2024 08:08 - INFO - [RFID Reader] Tag mit UID gefunden: 04309702426680
+03-12-2024 08:08 - INFO - [RFID Reader] Tag mit UID gefunden: 04309702426680
+03-12-2024 08:14 - INFO - [RFID Reader] PN532 erfolgreich initialisiert.
+03-12-2024 08:15 - INFO - [RFID Reader] Tag mit UID gefunden: 04309702426680
+03-12-2024 08:15 - INFO - [RFID Reader] Tag mit UID gefunden: 04309702426680
+03-12-2024 08:36 - INFO - [RFID Reader] PN532 erfolgreich initialisiert.
+03-12-2024 08:55 - INFO - [RFID Reader] PN532 erfolgreich initialisiert.
+03-12-2024 08:58 - INFO - [RFID Reader] PN532 erfolgreich initialisiert.
