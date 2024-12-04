@@ -28,3 +28,10 @@
 03-12-2024 08:36 - INFO - [RFID Reader] PN532 erfolgreich initialisiert.
 03-12-2024 08:55 - INFO - [RFID Reader] PN532 erfolgreich initialisiert.
 03-12-2024 08:58 - INFO - [RFID Reader] PN532 erfolgreich initialisiert.
+03-12-2024 11:27 - INFO - [RFID Reader] PN532 erfolgreich initialisiert.
+03-12-2024 11:27 - INFO - [RFID Reader] Tag mit UID gefunden: 04309702426680
+03-12-2024 11:51 - ERROR - [RFID Reader] Leseversuch 2 fehlgeschlagen: Did not receive expected ACK from PN532!
+03-12-2024 14:56 - ERROR - [RFID Reader] Leseversuch 2 fehlgeschlagen: Did not receive expected ACK from PN532!
+03-12-2024 20:59 - ERROR - [RFID Reader] Leseversuch 3 fehlgeschlagen: Did not receive expected ACK from PN532!
+04-12-2024 07:55 - INFO - [RFID Reader] Tag mit UID gefunden: 04309702426680
+04-12-2024 10:09 - INFO - [RFID Reader] PN532 erfolgreich initialisiert.

@@ -31,6 +31,7 @@ global server_status_label
 config = configparser.ConfigParser()
 config.read('config/config.cnf')
 version = config['version']['version_number']
+version_name = config['version']['version_name']
 
 
 
@@ -55,7 +56,7 @@ def create_gui():
     top_frame.pack(side="top", fill="x", expand=False)
 
     # Lade und passe das Logo an die Bildschirmgröße an
-    logo = Image.open('/home/pi_noatime/python/noa_time_alpha/img/churwork_logo_claim.png')
+    logo = Image.open('/home/pi_noatime/python/noatime/img/churwork_logo_claim.png')
     logo_width = int(screen_width * 0.5)  # Setze die Logo-Breite auf 50% der Bildschirmbreite
     logo_height = int(logo.size[1] * (logo_width / logo.size[0]))  # Behalte das Seitenverhältnis bei
     logo = logo.resize((logo_width, logo_height), Image.LANCZOS)
@@ -81,9 +82,10 @@ def create_gui():
     # Erstelle ein Frame für das Versions-Label unten rechts
     bottom_frame = tk.Frame(root, bg="white")
     bottom_frame.pack(side="bottom", fill="x", expand=False)
-
+    
+    version_label_text = f"{version} - {version_name}"
     # Versions-Label in der unteren rechten Ecke
-    version_label = tk.Label(bottom_frame, text=version, 
+    version_label = tk.Label(bottom_frame, text=version_label_text, 
                              bg="white", fg="gray",
                              font=("FreeMono", 12))  # Kleine Schriftgröße
     version_label.pack(side="right", anchor="se", padx=10, pady=10)  # Positioniere es unten rechts mit Abstand
