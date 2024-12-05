@@ -1,2 +1,11 @@
-/logs
-/config
+# Ignore logs folder
+logs/
+
+# Ignore all .log files
+*.log
+
+config/
+.cnf
+
+backup/
+.json
