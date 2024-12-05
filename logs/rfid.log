@@ -35,3 +35,222 @@
 03-12-2024 20:59 - ERROR - [RFID Reader] Leseversuch 3 fehlgeschlagen: Did not receive expected ACK from PN532!
 04-12-2024 07:55 - INFO - [RFID Reader] Tag mit UID gefunden: 04309702426680
 04-12-2024 10:09 - INFO - [RFID Reader] PN532 erfolgreich initialisiert.
+04-12-2024 10:53 - INFO - [RFID Reader] PN532 erfolgreich initialisiert.
+04-12-2024 10:56 - INFO - [RFID Reader] PN532 erfolgreich initialisiert.
+04-12-2024 10:58 - ERROR - [RFID Reader] Fehler bei der Initialisierung: Did not receive expected ACK from PN532!
+04-12-2024 10:58 - ERROR - [RFID Reader] Fehler bei der Initialisierung: Response frame preamble does not contain 0x00FF!
+04-12-2024 10:58 - ERROR - [RFID Reader] Fehler bei der Initialisierung: Did not receive expected ACK from PN532!
+04-12-2024 10:58 - ERROR - [RFID Reader] Fehler bei der Initialisierung: Response frame preamble does not contain 0x00FF!
+04-12-2024 10:58 - ERROR - [RFID Reader] Fehler bei der Initialisierung: Did not receive expected ACK from PN532!
+04-12-2024 10:58 - ERROR - [RFID Reader] Fehler bei der Initialisierung: Response frame preamble does not contain 0x00FF!
+04-12-2024 11:03 - ERROR - [RFID Reader] Fehler bei der Initialisierung: Did not receive expected ACK from PN532!
+04-12-2024 11:03 - ERROR - [RFID Reader] Fehler bei der Initialisierung: Did not receive expected ACK from PN532!
+04-12-2024 11:03 - ERROR - [RFID Reader] Fehler bei der Initialisierung: Received unexpected command response!
+04-12-2024 11:03 - INFO - [RFID Reader] PN532 erfolgreich initialisiert.
+04-12-2024 11:03 - ERROR - [RFID Reader] Leseversuch 1 fehlgeschlagen: Received unexpected command response!
+04-12-2024 11:03 - ERROR - [RFID Reader] Leseversuch 3 fehlgeschlagen: Received unexpected command response!
+04-12-2024 11:03 - ERROR - [RFID Reader] Fehler bei der Initialisierung: Failed to detect the PN532
+04-12-2024 11:16 - ERROR - [RFID Reader] Fehler bei der Initialisierung: Failed to detect the PN532
+04-12-2024 11:16 - ERROR - [RFID Reader] Fehler bei der Initialisierung: Failed to detect the PN532
+04-12-2024 11:16 - ERROR - [RFID Reader] Fehler bei der Initialisierung: device reports readiness to read but returned no data (device disconnected or multiple access on port?)
+04-12-2024 11:16 - INFO - [RFID Reader] PN532 erfolgreich initialisiert.
+04-12-2024 11:16 - ERROR - [RFID Reader] Leseversuch 2 fehlgeschlagen: Received unexpected command response!
+04-12-2024 11:16 - INFO - [RFID Reader] PN532 erfolgreich initialisiert.
+04-12-2024 11:19 - ERROR - [RFID Reader] Fehler bei der Initialisierung: name 'true' is not defined
+04-12-2024 11:19 - ERROR - [RFID Reader] Fehler bei der Initialisierung: name 'true' is not defined
+04-12-2024 11:19 - ERROR - [RFID Reader] Fehler bei der Initialisierung: name 'true' is not defined
+04-12-2024 11:19 - ERROR - [RFID Reader] Fehler bei der Initialisierung: name 'true' is not defined
+04-12-2024 11:19 - ERROR - [RFID Reader] Fehler bei der Initialisierung: name 'true' is not defined
+04-12-2024 11:19 - ERROR - [RFID Reader] Fehler bei der Initialisierung: name 'true' is not defined
+04-12-2024 11:19 - ERROR - [RFID Reader] Fehler bei der Initialisierung: name 'true' is not defined
+04-12-2024 11:19 - ERROR - [RFID Reader] Fehler bei der Initialisierung: name 'true' is not defined
+04-12-2024 11:19 - ERROR - [RFID Reader] Fehler bei der Initialisierung: name 'true' is not defined
+04-12-2024 11:19 - ERROR - [RFID Reader] Fehler bei der Initialisierung: name 'true' is not defined
+04-12-2024 11:19 - ERROR - [RFID Reader] Fehler bei der Initialisierung: Received unexpected command response!
+04-12-2024 11:19 - INFO - [RFID Reader] PN532 erfolgreich initialisiert.
+04-12-2024 11:20 - ERROR - [RFID Reader] Leseversuch 1 fehlgeschlagen: Received unexpected command response!
+04-12-2024 11:20 - ERROR - [RFID Reader] Leseversuch 3 fehlgeschlagen: Received unexpected command response!
+04-12-2024 11:20 - ERROR - [RFID Reader] Fehler bei der Initialisierung: Failed to detect the PN532
+04-12-2024 11:23 - ERROR - [RFID Reader] Fehler bei der Initialisierung: Received unexpected command response!
+04-12-2024 11:23 - INFO - [RFID Reader] PN532 erfolgreich initialisiert.
+04-12-2024 11:23 - ERROR - [RFID Reader] Leseversuch 1 fehlgeschlagen: Received unexpected command response!
+04-12-2024 11:23 - ERROR - [RFID Reader] Fehler bei der Initialisierung: device reports readiness to read but returned no data (device disconnected or multiple access on port?)
+04-12-2024 11:23 - ERROR - [RFID Reader] Leseversuch 2 fehlgeschlagen: Response contains no data!
+04-12-2024 11:23 - INFO - [RFID Reader] PN532 erfolgreich initialisiert.
+04-12-2024 11:23 - ERROR - [RFID Reader] Leseversuch 3 fehlgeschlagen: device reports readiness to read but returned no data (device disconnected or multiple access on port?)
+04-12-2024 11:23 - ERROR - [RFID Reader] Leseversuch 2 fehlgeschlagen: Response length checksum did not match length!
+04-12-2024 11:25 - ERROR - [RFID Reader] Fehler bei der Initialisierung: name 'PN532_I2C' is not defined
+04-12-2024 11:25 - ERROR - [RFID Reader] Fehler bei der Initialisierung: name 'PN532_I2C' is not defined
+04-12-2024 11:25 - ERROR - [RFID Reader] Fehler bei der Initialisierung: name 'PN532_I2C' is not defined
+04-12-2024 11:25 - ERROR - [RFID Reader] Fehler bei der Initialisierung: name 'PN532_I2C' is not defined
+04-12-2024 11:25 - ERROR - [RFID Reader] Fehler bei der Initialisierung: name 'PN532_I2C' is not defined
+04-12-2024 11:25 - ERROR - [RFID Reader] Fehler bei der Initialisierung: name 'PN532_I2C' is not defined
+04-12-2024 11:25 - ERROR - [RFID Reader] Fehler bei der Initialisierung: name 'PN532_I2C' is not defined
+04-12-2024 11:25 - ERROR - [RFID Reader] Fehler bei der Initialisierung: name 'PN532_I2C' is not defined
+04-12-2024 11:26 - ERROR - [RFID Reader] Fehler bei der Initialisierung: name 'PN532_I2C' is not defined
+04-12-2024 11:26 - ERROR - [RFID Reader] Fehler bei der Initialisierung: name 'PN532_I2C' is not defined
+04-12-2024 11:26 - ERROR - [RFID Reader] Fehler bei der Initialisierung: name 'PN532_I2C' is not defined
+04-12-2024 11:26 - ERROR - [RFID Reader] Fehler bei der Initialisierung: name 'PN532_I2C' is not defined
+04-12-2024 11:26 - ERROR - [RFID Reader] Fehler bei der Initialisierung: name 'PN532_I2C' is not defined
+04-12-2024 11:26 - ERROR - [RFID Reader] Fehler bei der Initialisierung: name 'PN532_I2C' is not defined
+04-12-2024 11:26 - ERROR - [RFID Reader] Fehler bei der Initialisierung: name 'PN532_I2C' is not defined
+04-12-2024 11:26 - ERROR - [RFID Reader] Fehler bei der Initialisierung: name 'PN532_I2C' is not defined
+04-12-2024 11:26 - ERROR - [RFID Reader] Fehler bei der Initialisierung: name 'PN532_I2C' is not defined
+04-12-2024 11:26 - ERROR - [RFID Reader] Fehler bei der Initialisierung: name 'PN532_I2C' is not defined
+04-12-2024 11:26 - ERROR - [RFID Reader] Fehler bei der Initialisierung: name 'PN532_I2C' is not defined
+04-12-2024 11:26 - ERROR - [RFID Reader] Fehler bei der Initialisierung: name 'PN532_I2C' is not defined
+04-12-2024 11:26 - ERROR - [RFID Reader] Fehler bei der Initialisierung: name 'PN532_I2C' is not defined
+04-12-2024 11:26 - ERROR - [RFID Reader] Fehler bei der Initialisierung: name 'PN532_I2C' is not defined
+04-12-2024 11:26 - ERROR - [RFID Reader] Fehler bei der Initialisierung: name 'PN532_I2C' is not defined
+04-12-2024 11:26 - ERROR - [RFID Reader] Fehler bei der Initialisierung: name 'PN532_I2C' is not defined
+04-12-2024 11:27 - ERROR - [RFID Reader] Fehler bei der Initialisierung: name 'PN532_I2C' is not defined
+04-12-2024 11:27 - ERROR - [RFID Reader] Fehler bei der Initialisierung: name 'PN532_I2C' is not defined
+04-12-2024 11:27 - ERROR - [RFID Reader] Fehler bei der Initialisierung: name 'PN532_I2C' is not defined
+04-12-2024 11:27 - ERROR - [RFID Reader] Fehler bei der Initialisierung: name 'PN532_I2C' is not defined
+04-12-2024 11:27 - ERROR - [RFID Reader] Fehler bei der Initialisierung: name 'PN532_I2C' is not defined
+04-12-2024 11:27 - ERROR - [RFID Reader] Fehler bei der Initialisierung: name 'PN532_I2C' is not defined
+04-12-2024 11:27 - ERROR - [RFID Reader] Fehler bei der Initialisierung: name 'PN532_I2C' is not defined
+04-12-2024 11:27 - ERROR - [RFID Reader] Fehler bei der Initialisierung: name 'PN532_I2C' is not defined
+04-12-2024 11:27 - ERROR - [RFID Reader] Fehler bei der Initialisierung: name 'PN532_I2C' is not defined
+04-12-2024 11:27 - ERROR - [RFID Reader] Fehler bei der Initialisierung: name 'PN532_I2C' is not defined
+04-12-2024 11:27 - ERROR - [RFID Reader] Fehler bei der Initialisierung: name 'PN532_I2C' is not defined
+04-12-2024 11:27 - ERROR - [RFID Reader] Fehler bei der Initialisierung: name 'PN532_I2C' is not defined
+04-12-2024 11:27 - ERROR - [RFID Reader] Fehler bei der Initialisierung: Failed to detect the PN532
+04-12-2024 11:27 - ERROR - [RFID Reader] Fehler bei der Initialisierung: Failed to detect the PN532
+04-12-2024 11:27 - ERROR - [RFID Reader] Fehler bei der Initialisierung: Failed to detect the PN532
+04-12-2024 11:27 - ERROR - [RFID Reader] Fehler bei der Initialisierung: Failed to detect the PN532
+04-12-2024 11:27 - ERROR - [RFID Reader] Fehler bei der Initialisierung: Failed to detect the PN532
+04-12-2024 11:27 - ERROR - [RFID Reader] Fehler bei der Initialisierung: Failed to detect the PN532
+04-12-2024 11:27 - ERROR - [RFID Reader] Fehler bei der Initialisierung: Failed to detect the PN532
+04-12-2024 11:27 - ERROR - [RFID Reader] Fehler bei der Initialisierung: Failed to detect the PN532
+04-12-2024 11:28 - ERROR - [RFID Reader] Fehler bei der Initialisierung: Did not receive expected ACK from PN532!
+04-12-2024 11:28 - INFO - [RFID Reader] PN532 erfolgreich initialisiert.
+04-12-2024 11:28 - INFO - [RFID Reader] Tag mit UID gefunden: 04309702426680
+04-12-2024 11:28 - INFO - [RFID Reader] PN532 erfolgreich initialisiert.
+04-12-2024 11:28 - ERROR - [RFID Reader] Fehler bei der Initialisierung: Received unexpected command response!
+04-12-2024 11:28 - INFO - [RFID Reader] PN532 erfolgreich initialisiert.
+04-12-2024 11:28 - ERROR - [RFID Reader] Fehler bei der Initialisierung: Did not receive expected ACK from PN532!
+04-12-2024 11:28 - ERROR - [RFID Reader] Leseversuch 1 fehlgeschlagen: Response frame preamble does not contain 0x00FF!
+04-12-2024 11:28 - ERROR - [RFID Reader] Leseversuch 2 fehlgeschlagen: Response length checksum did not match length!
+04-12-2024 11:28 - INFO - [RFID Reader] PN532 erfolgreich initialisiert.
+04-12-2024 11:28 - ERROR - [RFID Reader] Fehler bei der Initialisierung: device reports readiness to read but returned no data (device disconnected or multiple access on port?)
+04-12-2024 11:28 - INFO - [RFID Reader] PN532 erfolgreich initialisiert.
+04-12-2024 11:28 - INFO - [RFID Reader] Tag mit UID gefunden: 04309702426680
+04-12-2024 11:28 - INFO - [RFID Reader] PN532 erfolgreich initialisiert.
+04-12-2024 11:29 - ERROR - [RFID Reader] Fehler bei der Initialisierung: Did not receive expected ACK from PN532!
+04-12-2024 11:29 - INFO - [RFID Reader] PN532 erfolgreich initialisiert.
+04-12-2024 11:29 - INFO - [RFID Reader] Tag mit UID gefunden: 04309702426680
+04-12-2024 11:29 - INFO - [RFID Reader] PN532 erfolgreich initialisiert.
+04-12-2024 11:29 - INFO - [RFID Reader] Tag mit UID gefunden: 04309702426680
+04-12-2024 11:31 - ERROR - [RFID Reader] Fehler bei der Initialisierung: Did not receive expected ACK from PN532!
+04-12-2024 11:31 - ERROR - [RFID Reader] Fehler bei der Initialisierung: Response frame preamble does not contain 0x00FF!
+04-12-2024 11:31 - ERROR - [RFID Reader] Fehler bei der Initialisierung: device reports readiness to read but returned no data (device disconnected or multiple access on port?)
+04-12-2024 11:31 - INFO - [RFID Reader] PN532 erfolgreich initialisiert.
+04-12-2024 11:31 - ERROR - [RFID Reader] Leseversuch 2 fehlgeschlagen: Received unexpected command response!
+04-12-2024 11:31 - INFO - [RFID Reader] PN532 erfolgreich initialisiert.
+04-12-2024 11:31 - INFO - [RFID Reader] Tag mit UID gefunden: 04309702426680
+04-12-2024 11:32 - ERROR - [RFID Reader] Fehler bei der Initialisierung: Did not receive expected ACK from PN532!
+04-12-2024 11:32 - ERROR - [RFID Reader] Fehler bei der Initialisierung: Response frame preamble does not contain 0x00FF!
+04-12-2024 11:32 - ERROR - [RFID Reader] Fehler bei der Initialisierung: Did not receive expected ACK from PN532!
+04-12-2024 11:32 - ERROR - [RFID Reader] Fehler bei der Initialisierung: Did not receive expected ACK from PN532!
+04-12-2024 11:32 - ERROR - [RFID Reader] Fehler bei der Initialisierung: device reports readiness to read but returned no data (device disconnected or multiple access on port?)
+04-12-2024 11:32 - INFO - [RFID Reader] PN532 erfolgreich initialisiert.
+04-12-2024 11:32 - INFO - [RFID Reader] Tag mit UID gefunden: 04309702426680
+04-12-2024 11:32 - INFO - [RFID Reader] PN532 erfolgreich initialisiert.
+04-12-2024 11:38 - INFO - [RFID Reader] Found tag with UID: 04309702426680
+04-12-2024 11:38 - INFO - [RFID Reader] Found tag with UID: 04309702426680
+04-12-2024 11:46 - INFO - [RFID Reader] Found tag with UID: 04309702426680
+05-12-2024 07:57 - INFO - [RFID Reader] Found tag with UID: 04309702426680
+05-12-2024 08:14 - INFO - [RFID Reader] PN532 successfully initialized.
+05-12-2024 08:14 - INFO - Waiting for RFID/NFC card...
+05-12-2024 08:14 - WARNING - [RFID Reader] Failed to read RFID tag after retries.
+05-12-2024 08:14 - WARNING - [RFID Reader] Failed to read RFID tag after retries.
+05-12-2024 08:14 - INFO - [RFID Reader] Found tag with UID: 04309702426680
+05-12-2024 08:15 - WARNING - [RFID Reader] Failed to read RFID tag after retries.
+05-12-2024 08:15 - WARNING - [RFID Reader] Failed to read RFID tag after retries.
+05-12-2024 08:15 - INFO - [RFID Reader] Found tag with UID: 04309702426680
+05-12-2024 08:15 - WARNING - [RFID Reader] Failed to read RFID tag after retries.
+05-12-2024 08:15 - WARNING - [RFID Reader] Failed to read RFID tag after retries.
+05-12-2024 08:15 - WARNING - [RFID Reader] Failed to read RFID tag after retries.
+05-12-2024 08:15 - WARNING - [RFID Reader] Failed to read RFID tag after retries.
+05-12-2024 08:15 - WARNING - [RFID Reader] Failed to read RFID tag after retries.
+05-12-2024 08:15 - WARNING - [RFID Reader] Failed to read RFID tag after retries.
+05-12-2024 08:15 - WARNING - [RFID Reader] Failed to read RFID tag after retries.
+05-12-2024 08:15 - WARNING - [RFID Reader] Failed to read RFID tag after retries.
+05-12-2024 08:15 - WARNING - [RFID Reader] Failed to read RFID tag after retries.
+05-12-2024 08:16 - WARNING - [RFID Reader] Failed to read RFID tag after retries.
+05-12-2024 08:16 - WARNING - [RFID Reader] Failed to read RFID tag after retries.
+05-12-2024 08:16 - WARNING - [RFID Reader] Failed to read RFID tag after retries.
+05-12-2024 08:16 - WARNING - [RFID Reader] Failed to read RFID tag after retries.
+05-12-2024 08:16 - WARNING - [RFID Reader] Failed to read RFID tag after retries.
+05-12-2024 08:23 - ERROR - [RFID Reader] Initialization failed: device reports readiness to read but returned no data (device disconnected or multiple access on port?). Retrying...
+05-12-2024 08:23 - INFO - [RFID Reader] PN532 successfully initialized.
+05-12-2024 08:23 - INFO - Waiting for RFID/NFC card...
+05-12-2024 08:23 - WARNING - [RFID Reader] Error while reading RFID tag: Received unexpected command response!
+05-12-2024 08:23 - ERROR - [RFID Reader] Initialization failed: device reports readiness to read but returned no data (device disconnected or multiple access on port?). Retrying...
+05-12-2024 08:23 - ERROR - [RFID Reader] Initialization failed: Failed to detect the PN532. Retrying...
+05-12-2024 08:24 - INFO - [RFID Reader] Found tag with UID: 04309702426680
+05-12-2024 08:24 - WARNING - [RFID Reader] Error while reading RFID tag: Received unexpected command response!
+05-12-2024 08:24 - WARNING - [RFID Reader] Error while reading RFID tag: Received unexpected command response!
+05-12-2024 08:24 - ERROR - [RFID Reader] Initialization failed: Failed to detect the PN532. Retrying...
+05-12-2024 08:24 - INFO - [RFID Reader] Found tag with UID: 04309702426680
+05-12-2024 08:24 - ERROR - [RFID Reader] Initialization failed: Response length checksum did not match length!. Retrying...
+05-12-2024 08:24 - WARNING - [RFID Reader] Error while reading RFID tag: Received unexpected command response!
+05-12-2024 08:24 - ERROR - [RFID Reader] Initialization failed: Failed to detect the PN532. Retrying...
+05-12-2024 08:24 - WARNING - [RFID Reader] Error while reading RFID tag: Received unexpected command response!
+05-12-2024 08:24 - WARNING - [RFID Reader] Error while reading RFID tag: Received unexpected command response!
+05-12-2024 08:24 - ERROR - [RFID Reader] Initialization failed: Failed to detect the PN532. Retrying...
+05-12-2024 08:24 - INFO - [RFID Reader] Found tag with UID: 04309702426680
+05-12-2024 08:24 - WARNING - [RFID Reader] Error while reading RFID tag: Received unexpected command response!
+05-12-2024 08:24 - WARNING - [RFID Reader] Error while reading RFID tag: Received unexpected command response!
+05-12-2024 08:24 - WARNING - [RFID Reader] Error while reading RFID tag: Did not receive expected ACK from PN532!
+05-12-2024 08:24 - ERROR - [RFID Reader] Initialization failed: Response frame preamble does not contain 0x00FF!. Retrying...
+05-12-2024 08:24 - INFO - [RFID Reader] Found tag with UID: 04309702426680
+05-12-2024 08:25 - ERROR - [RFID Reader] Initialization failed: Did not receive expected ACK from PN532!. Retrying...
+05-12-2024 08:25 - ERROR - [RFID Reader] Initialization failed: Response frame preamble does not contain 0x00FF!. Retrying...
+05-12-2024 08:25 - ERROR - [RFID Reader] Initialization failed: Did not receive expected ACK from PN532!. Retrying...
+05-12-2024 08:25 - INFO - [RFID Reader] PN532 successfully initialized.
+05-12-2024 08:25 - INFO - Waiting for RFID/NFC card...
+05-12-2024 08:25 - INFO - [RFID Reader] Found tag with UID: 04309702426680
+05-12-2024 08:25 - WARNING - [RFID Reader] Error while reading RFID tag: Received unexpected command response!
+05-12-2024 08:25 - WARNING - [RFID Reader] Error while reading RFID tag: Received unexpected command response!
+05-12-2024 08:25 - WARNING - [RFID Reader] Error while reading RFID tag: Did not receive expected ACK from PN532!
+05-12-2024 08:25 - ERROR - [RFID Reader] Initialization failed: Response frame preamble does not contain 0x00FF!. Retrying...
+05-12-2024 08:28 - ERROR - [RFID Reader] Initialization failed: Failed to detect the PN532. Retrying in 5 seconds...
+05-12-2024 08:28 - ERROR - [RFID Reader] Initialization failed: Failed to detect the PN532. Retrying in 5 seconds...
+05-12-2024 08:28 - ERROR - [RFID Reader] Initialization failed: Did not receive expected ACK from PN532!. Retrying in 5 seconds...
+05-12-2024 08:28 - INFO - [RFID Reader] PN532 successfully initialized.
+05-12-2024 08:28 - INFO - Waiting for RFID/NFC card...
+05-12-2024 08:28 - WARNING - [RFID Reader] Error while reading RFID tag: Received unexpected command response!
+05-12-2024 08:28 - WARNING - [RFID Reader] Reinitializing PN532 due to persistent errors...
+05-12-2024 08:28 - ERROR - [RFID Reader] Initialization failed: Received unexpected command response!. Retrying in 5 seconds...
+05-12-2024 08:28 - INFO - [RFID Reader] PN532 successfully initialized.
+05-12-2024 08:28 - INFO - Waiting for RFID/NFC card...
+05-12-2024 08:28 - WARNING - [RFID Reader] Error while reading RFID tag: Received unexpected command response!
+05-12-2024 08:28 - WARNING - [RFID Reader] Reinitializing PN532 due to persistent errors...
+05-12-2024 08:28 - ERROR - [RFID Reader] Initialization failed: Received unexpected command response!. Retrying in 5 seconds...
+05-12-2024 08:28 - INFO - [RFID Reader] PN532 successfully initialized.
+05-12-2024 08:28 - INFO - [RFID Reader] Found tag with UID: 04309702426680
+05-12-2024 08:28 - WARNING - [RFID Reader] Error while reading RFID tag: Received unexpected command response!
+05-12-2024 08:28 - WARNING - [RFID Reader] Reinitializing PN532 due to persistent errors...
+05-12-2024 08:28 - ERROR - [RFID Reader] Initialization failed: device reports readiness to read but returned no data (device disconnected or multiple access on port?). Retrying in 5 seconds...
+05-12-2024 08:28 - INFO - [RFID Reader] PN532 successfully initialized.
+05-12-2024 08:28 - WARNING - [RFID Reader] Error while reading RFID tag: Received unexpected command response!
+05-12-2024 08:28 - WARNING - [RFID Reader] Reinitializing PN532 due to persistent errors...
+05-12-2024 08:29 - INFO - [RFID Reader] PN532 successfully initialized.
+05-12-2024 08:29 - INFO - Waiting for RFID/NFC card...
+05-12-2024 08:29 - INFO - [RFID Reader] Found tag with UID: 04309702426680
+05-12-2024 08:40 - INFO - [RFID Reader] PN532 successfully initialized.
+05-12-2024 08:40 - INFO - Waiting for RFID/NFC card...
+05-12-2024 08:41 - INFO - [RFID Reader] Found tag with UID: 04309702426680
+05-12-2024 08:41 - INFO - [RFID Reader] Found tag with UID: 04309702426680
+05-12-2024 08:41 - INFO - [RFID Reader] Found tag with UID: 04309702426680
+05-12-2024 08:44 - INFO - [Watchdog] RFID thread is still running.
+05-12-2024 08:44 - INFO - [RFID Reader] PN532 successfully initialized.
+05-12-2024 08:44 - INFO - Waiting for RFID/NFC card...
+05-12-2024 08:44 - INFO - [Watchdog] RFID thread is still running.
+05-12-2024 08:44 - INFO - [Watchdog] RFID thread is still running.
+05-12-2024 08:44 - INFO - [Watchdog] RFID thread is still running.
+05-12-2024 08:45 - INFO - [Watchdog] RFID thread is still running.
+05-12-2024 08:45 - INFO - [Watchdog] RFID thread is still running.
+05-12-2024 08:45 - INFO - [Watchdog] RFID thread is still running.

@@ -3,7 +3,7 @@ import threading
 import logging
 from gui import create_gui, update_server_status
 from connection import connection_checker
-from rfid import rfid_reader, monitor_rfid_thread  
+from rfid import rfid_reader, monitor_rfid_thread
 from database import connect_to_database
 import configparser
 
@@ -60,16 +60,15 @@ if __name__ == '__main__':
         daemon=True  # Daemon-Thread wird beendet, wenn das Hauptprogramm beendet wird
     )
     rfid_thread.start()
-
-    # Starte den Watchdog-Thread, der den RFID-Reader überwacht
-    watchdog_thread = threading.Thread(
+    
+    # Start the monitor function for the RFID thread
+    threading.Thread(
         target=monitor_rfid_thread, 
         args=(rfid_reader, conn_ref, root), 
-        name="WatchdogThread", 
         daemon=True
-    )
-    watchdog_thread.start()
-
+    ).start()    
+    
+   
     # Starte den Verbindungs-Checker-Thread
     threading.Thread(
         target=connection_checker, 
@@ -77,7 +76,8 @@ if __name__ == '__main__':
         name="ConnectionCheckerThread", 
         daemon=True  # Daemon-Thread wird beendet, wenn das Hauptprogramm beendet wird
     ).start()
-
+    
+        
     # Setze das Schließen-Verhalten der Anwendung, um die Verbindung korrekt zu beenden
     root.protocol("WM_DELETE_WINDOW", lambda: on_close(root, conn_ref))
     root.mainloop()  # Starte die Haupt-GUI-Schleife
