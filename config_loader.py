@@ -16,9 +16,11 @@ Changelog:
 
 ===============================================================================
 """
+import sys
 import os
 
 import os
+import sys
 
 def load_config(file_name="config.cnf"):
     """
@@ -28,8 +30,13 @@ def load_config(file_name="config.cnf"):
     config = {}
     current_section = None
 
-    # Get the current script directory
-    script_dir = os.path.dirname(os.path.abspath(__file__))
+    # Get the current script directory or executable folder
+    if getattr(sys, 'frozen', False):  # If the application is frozen (PyInstaller)
+        script_dir = sys._MEIPASS  # Path where PyInstaller unpacks data
+    else:
+        script_dir = os.path.dirname(os.path.abspath(__file__))  # Normal path in development
+
+    # Construct the full path to the config file
     config_path = os.path.join(script_dir, "config", file_name)
 
     try:
@@ -73,5 +80,6 @@ def load_config(file_name="config.cnf"):
         raise Exception(f"Error reading configuration file: {e}")
 
     return config
+
 
 
