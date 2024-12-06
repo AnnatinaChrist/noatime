@@ -32,7 +32,8 @@ conn_lock = threading.Lock()
 
 # Lade Gerätenamen aus der Konfigurationsdatei
 config = configparser.ConfigParser()
-config.read('config/config.cnf')
+config_path = '/home/pi_noatime/python/noatime/config/config.cnf'
+config.read(config_path)
 device_name = config['device']['name']
 
 # Initialisiere Logger

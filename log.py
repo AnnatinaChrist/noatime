@@ -21,8 +21,8 @@ import os
 class LoggerConfig:
     _configured = False
 
-    def __init__(self, log_file="logs/app.log", sql_log_file="logs/sql.log", connection_log_file="logs/connection.log", 
-                 rfid_log_file="logs/rfid.log", level=None, max_log_size=2*1024*1024, backup_count=5, formatter=None):
+    def __init__(self, log_file="/home/pi_noatime/python/noatime/logs/app.log", sql_log_file="/home/pi_noatime/python/noatime/logs/sql.log", connection_log_file="/home/pi_noatime/python/noatime/logs/connection.log", 
+                 rfid_log_file="/home/pi_noatime/python/noatime/logs/rfid.log", level=None, max_log_size=2*1024*1024, backup_count=5, formatter=None):
         self.log_file = log_file
         self.sql_log_file = sql_log_file
         self.connection_log_file = connection_log_file

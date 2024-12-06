@@ -29,7 +29,8 @@ global server_status_label
 
 # Version aus der Konfigurationsdatei entnehmen
 config = configparser.ConfigParser()
-config.read('config/config.cnf')
+config_path = '/home/pi_noatime/python/noatime/config/config.cnf'
+config.read(config_path)
 version = config['version']['version_number']
 version_name = config['version']['version_name']
 
