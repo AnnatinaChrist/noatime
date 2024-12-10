@@ -16,9 +16,6 @@ Changelog:
 
 ===============================================================================
 """
-import sys
-import os
-
 import os
 import sys
 
@@ -30,13 +27,8 @@ def load_config(file_name="config.cnf"):
     config = {}
     current_section = None
 
-    # Get the current script directory or executable folder
-    if getattr(sys, 'frozen', False):  # If the application is frozen (PyInstaller)
-        script_dir = sys._MEIPASS  # Path where PyInstaller unpacks data
-    else:
-        script_dir = os.path.dirname(os.path.abspath(__file__))  # Normal path in development
-
-    # Construct the full path to the config file
+    # Get the current script directory
+    script_dir = os.path.dirname(os.path.abspath(__file__))
     config_path = os.path.join(script_dir, "config", file_name)
 
     try:
@@ -57,8 +49,6 @@ def load_config(file_name="config.cnf"):
                 # Handle key-value pairs
                 if "=" in line:
                     key, value = line.split("=", 1)
-                    key = key.strip()
-                    value = value.strip()
 
                     # If value references an environment variable, resolve it
                     if value.startswith("${") and value.endswith("}"):
@@ -69,9 +59,9 @@ def load_config(file_name="config.cnf"):
 
                     # Add to the current section or the main config
                     if current_section:
-                        config[current_section][key] = value
+                        config[current_section][key.strip()] = value.strip()
                     else:
-                        config[key] = value
+                        config[key.strip()] = value.strip()
                 else:
                     print(f"Skipping invalid line (no '=' found): {line}")
     except FileNotFoundError:
@@ -80,6 +70,8 @@ def load_config(file_name="config.cnf"):
         raise Exception(f"Error reading configuration file: {e}")
 
     return config
+
+
 
 
 
