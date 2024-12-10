@@ -26,24 +26,22 @@ import os
 import re
 import threading
 import configparser
+from datetime import datetime
 
 # Thread-Sicherheits-Lock
 conn_lock = threading.Lock()
 
 # Lade Gerätenamen aus der Konfigurationsdatei
 config = configparser.ConfigParser()
-config_path = '/home/pi_noatime/python/noatime/config/config.cnf'
+config_path = 'config/config.cnf'
 config.read(config_path)
 device_name = config['device']['name']
 
 # Initialisiere Logger
 connection_logger = logging.getLogger("connection_logger")
 connection_logger.setLevel(logging.INFO)
-console_handler = logging.StreamHandler()
-console_handler.setLevel(logging.INFO)
-formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
-console_handler.setFormatter(formatter)
-connection_logger.addHandler(console_handler)
+connection_file_handler = logging.FileHandler("logs/connection.log")
+connection_logger.addHandler(connection_file_handler)
 
 
 def get_default_gateway():
@@ -188,6 +186,6 @@ def insert_initial_log(conn):
         cursor.execute(sql_insert, values)
         conn.commit()
         cursor.close()
-        logging.info(f"Erster Lebenszeichen-Log für Gerät eingefügt oder aktualisiert: {device_name}")
+        connection_logger.info(f"Erster Lebenszeichen-Log für Gerät eingefügt oder aktualisiert: {device_name}")
     except Exception as e:
-        logging.error(f"Fehler beim Einfügen oder Aktualisieren des ersten Lebenszeichen-Logs für Gerät {device_name}: {e}")
+        connection_logger.error(f"Fehler beim Einfügen oder Aktualisieren des ersten Lebenszeichen-Logs für Gerät {device_name}: {e}")

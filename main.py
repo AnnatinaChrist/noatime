@@ -3,82 +3,80 @@ import threading
 import logging
 from gui import create_gui, update_server_status
 from connection import connection_checker
-from rfid import rfid_reader, monitor_rfid_thread
+from rfid import rfid_reader
 from database import connect_to_database
+from pn532 import PN532_UART
 import configparser
 
-# Initialisiere den Logger
+# Initialize Logger
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger("main_logger")
 
-# Lade Gerätenamen aus der Konfigurationsdatei
+# Load Configurations
 config = configparser.ConfigParser()
-config_path = '/home/pi_noatime/python/noatime/config/config.cnf'
+config_path = 'config/config.cnf'
 config.read(config_path)
-device_name = config['device']['name']
+device_name = config['device']['name']  # Load device name
+
+# Initialize the PN532
+pn532 = PN532_UART(debug=False, reset=20)
+pn532.SAM_configuration()
+pn532_ref = {"pn532": pn532}
+hardware_lock = threading.Lock()
 
 def on_close(root, conn_ref):
     """
-    Wird aufgerufen, wenn das Fenster geschlossen wird. Beendet die Anwendung und schließt die Datenbankverbindung, falls sie noch offen ist.
+    Handles application closure by cleaning up resources.
     """
-    logger.info("Anwendung wurde über den Fenster-Schließen-Button geschlossen.")
+    logger.info("Application is shutting down.")
 
     try:
         conn = conn_ref.get('conn')
-        # Prüfen, ob die Verbindung noch besteht, und schließen
         if conn and conn.is_connected():
             conn.close()
-            logger.info("Datenbankverbindung wurde geschlossen.")
+            logger.info("Database connection closed.")
         else:
-            logger.warning("Datenbankverbindung war bereits geschlossen oder nicht verfügbar.")
+            logger.warning("No active database connection to close.")
     except Exception as e:
-        logger.error(f"Fehler beim Überprüfen oder Schließen der Verbindung: {e}")
+        logger.error(f"Error while closing the database connection: {e}")
 
-    root.destroy()  # Schließt das GUI
-    sys.exit()  # Beendet die Anwendung
+    root.destroy()
+    sys.exit()
 
-# Haupteinstiegspunkt
+# Main Entry Point
 if __name__ == '__main__':
-    root = create_gui()  # Erstelle das GUI
+    root = create_gui()  # Create the GUI
     conn_ref = {'conn': None, 'is_connected': False}
+    conn_lock = threading.Lock()  # Create a shared lock for database and hardware
 
-    # Versuche, eine Verbindung zur Datenbank herzustellen
+    # Connect to the database
     conn_ref['conn'] = connect_to_database()
     if conn_ref['conn']:
         conn_ref['is_connected'] = True
-        logger.info("[Main] Initiale Datenbankverbindung hergestellt.")
-        update_server_status(True)  # Setze den Serverstatus auf "Online"
+        logger.info("[Main] Database connection established.")
+        update_server_status(True)  # Update GUI server status
     else:
         conn_ref['is_connected'] = False
-        logger.warning("[Main] Konnte keine initiale Datenbankverbindung herstellen. Offline-Modus aktiviert.")
-        update_server_status(False)  # Setze den Serverstatus auf "Offline"
+        logger.warning("[Main] Database connection failed. Running in offline mode.")
+        update_server_status(False)  # Update GUI server status
 
-    # Starte die Threads für den Verbindungs-Checker und den RFID-Reader
+    # Start RFID reader thread
     rfid_thread = threading.Thread(
-        target=rfid_reader, 
-        args=(conn_ref, root), 
-        name="RFIDReaderThread", 
-        daemon=True  # Daemon-Thread wird beendet, wenn das Hauptprogramm beendet wird
+        target=rfid_reader,
+        args=(conn_ref, root, conn_lock, device_name, pn532_ref),  # Pass the necessary arguments
+        name="RFIDReaderThread",
+        daemon=True
     )
     rfid_thread.start()
     
-    # Start the monitor function for the RFID thread
+    # Start connection checker thread
     threading.Thread(
-        target=monitor_rfid_thread, 
-        args=(rfid_reader, conn_ref, root), 
+        target=connection_checker,
+        args=(conn_ref, root, update_server_status),
+        name="ConnectionCheckerThread",
         daemon=True
-    ).start()    
-    
-   
-    # Starte den Verbindungs-Checker-Thread
-    threading.Thread(
-        target=connection_checker, 
-        args=(conn_ref, root, update_server_status), 
-        name="ConnectionCheckerThread", 
-        daemon=True  # Daemon-Thread wird beendet, wenn das Hauptprogramm beendet wird
     ).start()
-    
-        
-    # Setze das Schließen-Verhalten der Anwendung, um die Verbindung korrekt zu beenden
+   
+    # Set close behavior for the application
     root.protocol("WM_DELETE_WINDOW", lambda: on_close(root, conn_ref))
-    root.mainloop()  # Starte die Haupt-GUI-Schleife
+    root.mainloop()
