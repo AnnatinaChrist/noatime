@@ -97,12 +97,12 @@ def create_gui():
 
     # Clock Label (Date and Time)
     clock_label = tk.Label(center_frame, text="", bg="white", fg="black",
-                           font=(custom_font, 10), anchor="center")
+                           font=(custom_font, 24), anchor="center")
     clock_label.pack(pady=(10, 5))  # Add padding above the instruction label
 
     # Instruction Label
-    instruction_label = tk.Label(center_frame, text="Bitte RFID Tag an Lesegerät halten",
-                                  bg="white", fg="black", font=(custom_font, 24, "bold"))
+    instruction_label = tk.Label(center_frame, text="Guten Tag",
+                                  bg="white", fg="black", font=(custom_font, 24))
     instruction_label.pack(expand=True)
 
     # Bottom Frame (Version and Server Status)

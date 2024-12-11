@@ -1,0 +1,13 @@
+10-12-2024 09:57 - INFO - [Backup] Verarbeite Backup-Daten...
+10-12-2024 09:57 - ERROR - [Backup] Fehler bei der Verarbeitung des Eintrags: 'NoneType' object has no attribute 'cursor'
+10-12-2024 09:57 - INFO - [Backup] Backup-Verarbeitung abgeschlossen.
+10-12-2024 10:56 - INFO - [Backup] Verarbeite Backup-Daten...
+10-12-2024 10:56 - ERROR - [Backup] Fehler bei der Verarbeitung des Eintrags: 'NoneType' object has no attribute 'cursor'
+10-12-2024 10:56 - INFO - [Backup] Backup-Verarbeitung abgeschlossen.
+10-12-2024 11:17 - INFO - [Backup] Verarbeite Backup-Daten...
+10-12-2024 11:17 - ERROR - [Backup] Fehler bei der Verarbeitung des Eintrags: 'NoneType' object has no attribute 'cursor'
+10-12-2024 11:17 - INFO - [Backup] Backup-Verarbeitung abgeschlossen.
+10-12-2024 11:48 - INFO - [Backup] Verarbeite Backup-Daten...
+10-12-2024 11:48 - ERROR - [Backup] Fehler bei der Verarbeitung des Eintrags: 'NoneType' object has no attribute 'cursor'
+10-12-2024 11:48 - ERROR - [Backup] Fehler bei der Verarbeitung des Eintrags: 'NoneType' object has no attribute 'cursor'
+10-12-2024 11:48 - INFO - [Backup] Backup-Verarbeitung abgeschlossen.
