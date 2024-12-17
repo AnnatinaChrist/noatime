@@ -1,2 +1,0 @@
-# noatime
-Stempeluhr 
