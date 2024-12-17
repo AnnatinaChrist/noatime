@@ -1,0 +1,16 @@
+# Ignore Python compiled files
+*.pyc
+__pycache__/
+
+# Ignore configuration files
+config/config.cnf
+
+# Ignore logs
+*.log
+
+# Ignore all files in a specific folder
+secrets/
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
