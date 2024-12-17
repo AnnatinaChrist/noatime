@@ -1,0 +1,12 @@
+[client]
+user = noa_pi
+password = ISByaxs6zz8bA2//3o7F+Q==
+host = pv-catw-002
+database = noa_office
+
+[device]
+name = Pi_E30
+
+[version]
+version_number = 1.0.1
+version_name = Alpendohle
