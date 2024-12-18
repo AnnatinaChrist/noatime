@@ -8,8 +8,10 @@ config/config.cnf
 # Ignore logs
 *.log
 /logs
-# Ignore all files in a specific folder
-secrets/
+
+#Ignore .env file
+.env
+
 
 # Ignore OS-specific files
 .DS_Store

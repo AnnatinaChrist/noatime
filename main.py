@@ -20,7 +20,7 @@ import threading
 import logging
 from gui import create_gui
 from connection import connection_checker
-from rfid import rfid_reader
+from rfid import initialize_reader, rfid_reader
 from database import connect_to_database, process_backup_data
 from pn532 import PN532_UART
 import configparser
@@ -34,12 +34,10 @@ config = configparser.ConfigParser()
 config_path = 'config/config.cnf'
 config.read(config_path)
 device_name = config['device']['name']  # Lade den Gerätenamen aus der Konfigurationsdatei
+device_user = config['device']['username'] #Gerät-Benutzername aus der Konfigurationsdatei
 
-# Initialisiere den PN532 RFID-Reader
-pn532 = PN532_UART(debug=False, reset=20)
-pn532.SAM_configuration()  # Konfiguriere den PN532 RFID-Reader
-pn532_ref = {"pn532": pn532}
-hardware_lock = threading.Lock()  # Lock für Hardwareoperationen
+# Initialize the PN532 RFID reader
+pn532_ref = initialize_reader()
 
 def on_close(root, conn_ref):
     """

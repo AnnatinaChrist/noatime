@@ -23,20 +23,25 @@ from config_loader import load_config
 from logger_config import LoggerConfig
 import os
 import tempfile
+from dotenv import load_dotenv
 
 # Konfiguriere Logging
 logger_config = LoggerConfig()
 logger_config.configure()
+sql_log = logger_config.get_logger("sql_logger")
 
 # Lade Gerätenamen aus der Konfigurationsdatei
 config = configparser.ConfigParser()
 config_path = 'config/config.cnf'
 config.read(config_path)
 device_name = config['device']['name']
+device_user = config['device']['username']
 
 
 BACKUP_FILE = 'backup/backup.json'
 
+# Load the .env file (automatically looks for a .env file in the root directory)
+load_dotenv()  # This will load environment variables from the .env file into the environment
 # Hilfsfunktionen
 def sanitize_uid(uid):
     """
@@ -62,7 +67,7 @@ def write_to_backup_file(sql, values):
     """
     Schreibt einen SQL-Befehl und seine Werte als JSON in die Backup-Datei.
     """
-    sql_log = logging.getLogger("sql_logger")
+    
     if sql is None or values is None:
         print("Fehler: SQL-Befehl oder Werte sind None.")
         return
@@ -72,9 +77,9 @@ def write_to_backup_file(sql, values):
             # Make sure the values are properly formatted
             json.dump({"sql": sql, "values": values}, file)
             file.write("\n")
-        sql_log(f"Operation in Backup-Datei geschrieben: {sql} mit Werten {values}")
+        sql_log.info(f"Operation in Backup-Datei geschrieben: {sql} mit Werten {values}")
     except Exception as e:
-        sql_log(f"Fehler beim Schreiben in die Backup-Datei: {e}")
+        sql_log.error(f"Fehler beim Schreiben in die Backup-Datei: {e}")
         
 def handle_backup(conn_ref, sql, values):
     """
@@ -93,7 +98,7 @@ def process_backup_data(conn):
     Liest und verarbeitet Backup-Daten aus der Backup-Datei.
     Löscht jede Eintragung nach der Verarbeitung, um Duplikate zu vermeiden.
     """
-    sql_log = logging.getLogger("sql_logger")
+    
     if not os.path.exists(BACKUP_FILE):
         sql_log.warning("[Backup] Keine Backup-Datei gefunden.")
         return
@@ -140,13 +145,13 @@ def check_rfid_exists(cursor, uid):
 
 
 def create_stamp_entry(conn, cursor, peke_key_id):
-    sql_log = logging.getLogger("sql_logger")
+   
     """
     Erstellt einen Stempel-Eintrag für die gegebene `peke_key_id`.
     """
     sanitized_peke_key_id = sanitize_uid(peke_key_id)
     sql = "INSERT INTO stamp (sta_key_id, sta_ort, sta_stempel_zeit, sta_crt_usr) VALUES (%s, %s, NOW(), %s)"
-    values = (sanitized_peke_key_id, device_name, "test_pi")
+    values = (sanitized_peke_key_id, device_name, device_user)
 
     if conn:
         try:
@@ -160,7 +165,7 @@ def create_stamp_entry(conn, cursor, peke_key_id):
 
 
 def register_rfid_tag(conn, cursor, uid):
-    sql_log = logging.getLogger("sql_logger")
+    
     """
     Registriert ein RFID-Tag in der Datenbank, wenn es noch nicht existiert.
     """
@@ -169,7 +174,7 @@ def register_rfid_tag(conn, cursor, uid):
 
         if not check_rfid_exists(cursor, sanitized_uid):
             sql = "INSERT INTO person_key (peke_key_id, peke_typ, peke_crt_user) VALUES (%s, %s, %s)"
-            values = (sanitized_uid, "rfid", "test_pi")
+            values = (sanitized_uid, "rfid", device_user)
 
             if conn:
                 cursor.execute(sql, values)
@@ -225,24 +230,33 @@ def get_time_clock_count(cursor, peke_key_id):
 
 def connect_to_database():
     """
-    Stellt eine Verbindung zur Datenbank mithilfe der Konfigurationsdatei her.
+    Connect to the database using environment variables for credentials.
     """
     try:
-        config = load_config("config.cnf")  # Lade die Konfigurationsdatei
-        db_config = config.get("client", {})
-        if not db_config:
-            raise ValueError("Die Client-Konfiguration ist entweder leer oder fehlt.")
+        # Fetch the database connection info from environment variables
+        db_user = os.getenv("DB_USER")
+        db_password = os.getenv("DB_PASSWORD")
+        db_host = os.getenv("DB_HOST")
+        db_name = os.getenv("DB_NAME")
 
-        # Versuche, eine Verbindung herzustellen
+        # Check that all necessary environment variables are set
+        if not all([db_user, db_password, db_host, db_name]):
+            raise ValueError("Missing one or more required database configuration values in environment variables.")
+
+        # Attempt to establish a database connection
         conn = connect(
-            user=db_config.get("user"),
-            password=db_config.get("password"),
-            host=db_config.get("host"),
-            database=db_config.get("database"),
-            connection_timeout=10  # Setze ein Timeout, um ein Hängen zu vermeiden
+            user=db_user,
+            password=db_password,
+            host=db_host,
+            database=db_name,            
+            connection_timeout=10  # Set a timeout to avoid hanging
         )
-        logging.info("Datenbankverbindung hergestellt.")
+        logging.info("Database connection established.")
         return conn
     except Error as e:
-        logging.error(f"Verbindung zur Datenbank konnte nicht hergestellt werden: {e}")
+        logging.error(f"Error establishing database connection: {e}")
         return None
+    except ValueError as e:
+        logging.error(f"Configuration error: {e}")
+        return None
+

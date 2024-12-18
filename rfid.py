@@ -12,7 +12,8 @@ from database import (
 )
 from gui import update_instruction_label, reset_instruction_label
 from datetime import datetime
-from log import LoggerConfig
+from logger_config import LoggerConfig
+import configparser
 
 # Initialize and configure the loggers
 logger_config = LoggerConfig()
@@ -21,9 +22,11 @@ logger_config.configure()
 # Fetch the RFID logger
 rfid_logger = logger_config.get_logger("rfid_logger")
 
-# Use the logger in your RFID module
-rfid_logger.info("RFID logger initialized successfully.")
-rfid_logger.error("This is a sample error log.")
+# Lade Geräte-Benutzernamen aus der Konfigurationsdatei
+config = configparser.ConfigParser()
+config_path = 'config/config.cnf'
+config.read(config_path)
+device_user = config['device']['username']
 
 # Debounce variables
 last_uid = None
@@ -35,7 +38,15 @@ badge_read_time = datetime.now()
 # Format the timestamp for SQL (if needed)
 formatted_time = badge_read_time.strftime('%Y-%m-%d %H:%M:%S')
 
-def rfid_reader(conn_ref, root, conn_lock, device_name, pn532_ref):
+def initialize_reader():
+    """
+    Initializes the PN532 RFID reader.
+    """
+    pn532 = PN532_UART(debug=False, reset=20)
+    pn532.SAM_configuration()  # Configure the PN532 RFID reader
+    return {"pn532": pn532}
+
+def rfid_reader(conn_ref, root, conn_lock, device_name,pn532_ref):
     """
     Reads RFID tags and processes them with the database logic, including error handling
     and PN532 reset attempts when necessary.
@@ -118,7 +129,7 @@ def rfid_reader(conn_ref, root, conn_lock, device_name, pn532_ref):
                         rfid_logger.info("No database connection. Writing to backup.")
                         write_to_backup_file(
                             "INSERT INTO stamp (sta_key_id, sta_ort, sta_stempel_zeit, sta_crt_usr) VALUES (%s, %s, %s, %s)",
-                            (uid_str, device_name,formatted_time, "test_pi"),
+                            (uid_str, device_name,formatted_time, device_user),
                         )
                         root.after(0, update_instruction_label, "Eingestempelt.")
                         
@@ -151,7 +162,7 @@ def rfid_reader(conn_ref, root, conn_lock, device_name, pn532_ref):
                             rfid_logger.error(f"Error while processing RFID tag: {e}")
                             write_to_backup_file(
                                 "INSERT INTO stamp (sta_key_id, sta_ort, sta_stempel_zeit, sta_crt_usr) VALUES (%s, %s, %s, %s)",
-                                (uid_str, device_name, formatted_time, "test_pi"),
+                                (uid_str, device_name, formatted_time, device_user),
                             )
                             root.after(0, update_instruction_label, "Eingestempelt.")
                             
