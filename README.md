@@ -1,6 +1,3 @@
-
-Of course! Here's the German translation of the README in a format you can easily copy:
-
 Noatime - RFID Zeiterfassung Anwendung
 Projektübersicht
 Noatime ist eine RFID-basierte Zeiterfassungsanwendung, die eine einfache Ein- und Ausstempelung über NFC-Karten ermöglicht. Die Anwendung interagiert mit einem PN532 RFID-Reader, verwaltet Verbindungen zu einer Datenbank für das Speichern von Zeitstempeln und unterstützt einen Offline-Modus, falls die Datenbank nicht verfügbar ist.
