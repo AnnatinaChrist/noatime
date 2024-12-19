@@ -3,11 +3,11 @@
 Noatime ist eine RFID-basierte Zeiterfassungsanwendung, die eine einfache Ein- und Ausstempelung über NFC-Karten ermöglicht. Die Anwendung interagiert mit einem PN532 RFID-Reader, verwaltet Verbindungen zu einer Datenbank für das Speichern von Zeitstempeln und unterstützt einen Offline-Modus, falls die Datenbank nicht verfügbar ist.
 
 # Funktionen
-**RFID Zeiterfassung:** Verwendet einen NFC RFID-Reader (PN532), um Ein- und Ausstempelzeiten basierend auf RFID-Tag-Scans zu registrieren.
-**Datenbankintegration:** Die Anwendung verbindet sich mit einer MySQL-Datenbank zum Speichern von Zeitstempeln.
-**Offline-Modus:** Wenn die Datenbank nicht verfügbar ist, speichert die Anwendung die Zeitstempel in einer Backup-Datei für eine spätere Verarbeitung.
-**Health-Check:** Periodische Prüfungen stellen sicher, dass der RFID-Reader reagiert. Falls er nicht funktioniert, wird ein Reset des Readers versucht.
-**Multithreaded-Architektur:** Verwendet Python-Threads, um den RFID-Reader und die Überwachung der Datenbankverbindung gleichzeitig auszuführen.
++ RFID Zeiterfassung: Verwendet einen NFC RFID-Reader (PN532), um Ein- und Ausstempelzeiten basierend auf RFID-Tag-Scans zu registrieren.
++ Datenbankintegration: Die Anwendung verbindet sich mit einer MySQL-Datenbank zum Speichern von Zeitstempeln.
++ Offline-Modus: Wenn die Datenbank nicht verfügbar ist, speichert die Anwendung die Zeitstempel in einer Backup-Datei für eine spätere Verarbeitung.
++ Health-Check: Periodische Prüfungen stellen sicher, dass der RFID-Reader reagiert. Falls er nicht funktioniert, wird ein Reset des Readers versucht.
++ Multithreaded-Architektur: Verwendet Python-Threads, um den RFID-Reader und die Überwachung der Datenbankverbindung gleichzeitig auszuführen.
 
 # Installation
 Um Noatime auf deinem System einzurichten, folge diesen Schritten:
