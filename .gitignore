@@ -5,6 +5,9 @@ __pycache__/
 # Ignore configuration files
 config/config.cnf
 
+#Ignore venv folder
+/venv
+
 # Ignore logs
 *.log
 /logs

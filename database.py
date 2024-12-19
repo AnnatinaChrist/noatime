@@ -19,7 +19,6 @@ import logging
 import json
 import configparser
 from mysql.connector import connect, Error
-from config_loader import load_config
 from logger_config import LoggerConfig
 import os
 import tempfile

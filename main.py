@@ -22,7 +22,6 @@ from gui import create_gui
 from connection import connection_checker
 from rfid import initialize_reader, rfid_reader
 from database import connect_to_database, process_backup_data
-from pn532 import PN532_UART
 import configparser
 
 # Initialisiere Logger

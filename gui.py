@@ -20,10 +20,7 @@ Changelog:
 import tkinter as tk
 from PIL import Image, ImageTk
 import configparser
-import time
-import datetime  # For date and time
 import locale
-from tkinter import font
 from PIL import ImageFont
 import os
 import sys
@@ -149,7 +146,6 @@ def create_bottom_frame(root, screen_width, screen_height):
 # Update Functions
 def update_time():
     """Update the clock label with the current time and date."""
-    import time
     from datetime import datetime
 
     # Get the current time and date

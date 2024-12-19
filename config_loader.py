@@ -17,7 +17,6 @@ Changelog:
 ===============================================================================
 """
 import os
-import sys
 
 def load_config(file_name="config.cnf"):
     """
